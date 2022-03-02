@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">PUZZLE 15</string>
+    <string name="start">NEW GAME</string>
+    <string name="settings">SETTINGS</string>
+    <string name="about">ABOUT</string>
+    <string name="exit">EXIT</string>
+    <string name="count">COUNT</string>
+    <string name="_0">0</string>
+    <string name="time">TIME</string>
+    <string name="_00_00">00:00</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">10</string>
+    <string name="_11">11</string>
+    <string name="_12">12</string>
+    <string name="_13">13</string>
+    <string name="_14">14</string>
+    <string name="_15">15</string>
+    <string name="restart">RESTART</string>
+    <string name="menu">MENU</string>
+    <string name="create_username">CREATE USERNAME</string>
+    <string name="ok">OK</string>
+    <string name="night_mode">NIGHT MODE</string>
+    <string name="music">MUSIC</string>
+    <string name="sound">SOUND</string>
+</resources>

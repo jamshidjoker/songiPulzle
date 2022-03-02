@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">15 BOSHQOTIRMA</string>
+    <string name="start">YANGI 6YIN</string>
+    <string name="settings">SOZLAMALAR</string>
+    <string name="about">BATAFSIL</string>
+    <string name="exit">CHIQISH</string>
+    <string name="count">QADAMLAR</string>
+    <string name="_0">0</string>
+    <string name="time">VAQT</string>
+    <string name="_00_00">00:00</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">10</string>
+    <string name="_11">11</string>
+    <string name="_12">12</string>
+    <string name="_13">13</string>
+    <string name="_14">14</string>
+    <string name="_15">15</string>
+    <string name="restart">RESTART</string>
+    <string name="menu">MENYU</string>
+    <string name="create_username">NOM YARATING</string>
+    <string name="ok">HA</string>
+    <string name="night_mode">TUGNI REJIM</string>
+    <string name="music">MUSIQA</string>
+    <string name="sound">OVOZ</string>
+    <string name="step_count">QADAMLAR SONI :</string>
+    <string name="save">SAQLASH</string>
+    <string name="clear">6CHIRISH</string>
+    <string name="result">NATIJALAR</string>
+    <string name="aboutgame">15 ta boshqotirma (shuningdek, Gem Puzzle, Boss Puzzle, Fifteen oʻyini, Mystic Square va boshqalar deb ataladi) toymasin boshqotirma boʻlib, 1-15 gacha raqamlangan 15 kvadrat plitkadan iborat boʻlib, balandligi 4 plitka va eni 4 ta kafel boʻlib, bittasi boʻsh qolmaydi. plitka pozitsiyasi. Ochiq joyning bir xil satri yoki ustunidagi plitkalar ularni mos ravishda gorizontal yoki vertikal ravishda siljitish orqali ko\'chirilishi mumkin. Jumboqning maqsadi plitkalarni raqamli tartibda joylashtirishdir. Ramkadagi plitkalar soni uchun nom berilgan 15 ta jumboqni 16 ta jumboq deb ham atash mumkin, bu uning umumiy plitka sig\'imini nazarda tutadi. Shunga o\'xshash nomlar 15 ta jumboqning turli o\'lchamdagi variantlari uchun ishlatiladi, masalan, 3 × 3 ramkada 8 ta plitka bo\'lgan 8 ta jumboq. n boshqotirmasi evristik usullarni o\'z ichiga olgan algoritmlarni modellashtirish uchun klassik muammodir. Ushbu muammo uchun tez-tez ishlatiladigan evristik usullarga noto\'g\'ri joylashtirilgan plitkalar sonini hisoblash va har bir blok va uning maqsad konfiguratsiyasidagi o\'rni orasidagi taksi masofalari yig\'indisini topish kiradi.[1] E\'tibor bering, ikkalasiga ham ruxsat beriladi, ya\'ni ular hech qachon qolgan harakatlar sonini oshirib yubormaydi, bu A* kabi ma\'lum qidiruv algoritmlari uchun optimallikni ta\'minlaydi.[1]</string>
+
+</resources>

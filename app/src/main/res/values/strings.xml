@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">GAME 15</string>
+    <string name="start">NEW GAME</string>
+    <string name="settings">SETTINGS</string>
+    <string name="about">ABOUT</string>
+    <string name="exit">EXIT</string>
+    <string name="count">COUNT</string>
+    <string name="_0">0</string>
+    <string name="time">TIME</string>
+    <string name="_00_00">00:00</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">10</string>
+    <string name="_11">11</string>
+    <string name="_12">12</string>
+    <string name="_13">13</string>
+    <string name="_14">14</string>
+    <string name="_15">15</string>
+    <string name="restart">RESTART</string>
+    <string name="menu">MENU</string>
+    <string name="create_username">CREATE USERNAME</string>
+    <string name="ok">OK</string>
+    <string name="night_mode">NIGHT MODE</string>
+    <string name="music">MUSIC</string>
+    <string name="sound">SOUND</string>
+    <string name="step_count">STEP COUNT :</string>
+    <string name="save">SAVE</string>
+    <string name="clear">clear</string>
+    <string name="result">RESULT</string>
+    <string name="aboutgame" translatable="false">the_15_puzzle_also_called_gem_puzzle_boss_puzzle_game_of_fifteen_mystic_square_and_many_others_is_a_sliding_puzzle_having_15_square_tiles_numbered_1_15_in_a_frame_that_is_4_tiles_high_and_4_tiles_wide_leaving_one_unoccupied_tile_position_tiles_in_the_same_row_or_column_of_the_open_position_can_be_moved_by_sliding_them_horizontally_or_vertically_respectively_the_goal_of_the_puzzle_is_to_place_the_tiles_in_numerical_order_named_for_the_number_of_tiles_in_the_frame_the_15_puzzle_may_also_be_called_a_16_puzzle_alluding_to_its_total_tile_capacity_similar_names_are_used_for_different_sized_variants_of_the_15_puzzle_such_as_the_8_puzzle_that_has_8_tiles_in_a_3_3_frame_the_n_puzzle_is_a_classical_problem_for_modelling_algorithms_involving_heuristics_commonly_used_heuristics_for_this_problem_include_counting_the_number_of_misplaced_tiles_and_finding_the_sum_of_the_taxicab_distances_between_each_block_and_its_position_in_the_goal_configuration_1_note_that_both_are_admissible_i_e_they_never_overestimate_the_number_of_moves_left_which_ensures_optimality_for_certain_search_algorithms_such_as_a_1</string>
+</resources>

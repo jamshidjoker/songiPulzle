@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/newGame"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/img_3"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:text="@string/start"
+        android:textSize="25sp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="5dp"
+        android:id="@+id/settings"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/img_3"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:text="@string/settings"
+        android:textSize="25sp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/result"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/img_3"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:text="@string/result"
+        android:textSize="25sp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/about"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/img_3"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:text="@string/about"
+        android:textSize="25sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/exit"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/img_3"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:text="@string/exit"
+        android:textSize="25sp"
+        />
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
