@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/scorew"
@@ -23,7 +23,7 @@
         android:layout_centerVertical="true"
         android:text="@string/step_count"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="30sp"
         />
     <TextView
         android:layout_below="@+id/scorew"
@@ -35,7 +35,7 @@
         android:layout_centerVertical="true"
         android:text="@string/time"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="30sp"
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/SAQLASH"

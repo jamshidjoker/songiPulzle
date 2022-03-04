@@ -2,8 +2,6 @@ package com.jamshidprograms.myapplication
 
 import android.content.Intent
 import android.media.MediaPlayer
-import android.net.wifi.WifiConfiguration.AuthAlgorithm.strings
-import android.net.wifi.WifiConfiguration.GroupCipher.strings
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -11,7 +9,6 @@ import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
-import com.jamshidprograms.myapplication.R
 import java.util.*
 
 class SettingsActivity : AppCompatActivity() {
@@ -21,7 +18,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var ok:AppCompatButton
     private lateinit var uz:ImageButton
     private lateinit var en:ImageButton
-    lateinit var preferes :SharedPreferencesHelper
+    private lateinit var preferes :SharedPreferencesHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -75,12 +72,12 @@ class SettingsActivity : AppCompatActivity() {
             language("uz")
         }
     }
-    fun language(language: String){
+    private fun language(language: String){
         val locale = Locale(language)
         Locale.setDefault(locale)
-        val resources = getResources()
-        val configuration = resources.getConfiguration()
-        configuration.locale = locale
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics())
+        val resources = resources
+        val configuration = resources.configuration
+        configuration.locale= locale
+        resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 }

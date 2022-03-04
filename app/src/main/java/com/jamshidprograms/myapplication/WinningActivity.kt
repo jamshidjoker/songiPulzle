@@ -13,7 +13,6 @@ class WinningActivity : AppCompatActivity() {
     private lateinit var score:TextView
     private lateinit var time:TextView
     private lateinit var login:TextView
-    private lateinit var save:AppCompatButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_winning)
@@ -22,16 +21,20 @@ class WinningActivity : AppCompatActivity() {
         login = findViewById(R.id.loginw)
         score.text = "SCORECOUNTER : " + intent.getStringExtra("SCORE")
         time.text = "TIME : " + intent.getStringExtra("TIME")
-        intent.putExtra("SCOREC", score.text.toString())
-        intent.putExtra("TIMEC", time.text.toString())
         startTimer()
+
+
 //        login.text = "" + intent.getStringExtra("LOGIN")
     }
     private fun startTimer() {
 
         object : CountDownTimer(3000, 1000) {
             override fun onFinish() {
-                startActivity(Intent(this@WinningActivity, ResultActivity::class.java))
+                val intent = Intent(this@WinningActivity, ResultActivity::class.java)
+                intent.putExtra("SCOREC","SCORECOUNTER : " + intent.getStringExtra("SCORE"))
+                intent.putExtra("TIMEC", "TIME : " + intent.getStringExtra("TIME"))
+                startActivity(intent)
+
             }
 
             override fun onTick(millisUntilFinished: Long) {

@@ -20,8 +20,10 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
         clear = findViewById(R.id.btnclear)
         save = findViewById(R.id.button_save)
+
 //        mResulsView = findViewById(R.id.views)
         tv_text = findViewById(R.id.tv_text)
+//        tv_text.text = "${intent.getStringExtra("TIMEC").toString()} +            ${intent.getStringExtra("SCOREC").toString()}"
         second = intent.getStringExtra("TIMEC").toString()
         count = intent.getStringExtra("SCOREC").toString()
         loadData()
@@ -35,7 +37,7 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun saveData() {
-        val insertedText = intent.getStringArrayExtra("TIMEC").toString() + "           ${intent.getStringExtra("SCOREC").toString()}            "
+        val insertedText = intent.getStringExtra("TIMEC").toString() + "           ${intent.getStringExtra("SCOREC").toString()}            "
         tv_text.text = insertedText
         val sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
@@ -48,7 +50,7 @@ class ResultActivity : AppCompatActivity() {
 
     private fun loadData() {
         val sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE)
-        val savedString = sharedPreferences.getString("STRING_KEY"  , null)
+        val savedString = sharedPreferences.getString("STRING_KEY", "SCORE:                 TIME: ")
         tv_text.text = savedString
     }
 }
