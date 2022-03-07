@@ -24,20 +24,14 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_weight="1"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_save"
-            android:layout_weight="1"
-            android:text="@string/save"
-            />
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnclear"
-            android:layout_weight="1"
-            android:text="@string/clear"
+            android:id="@+id/homew"
+            android:layout_gravity="center_horizontal"
+            android:text="home"
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
 

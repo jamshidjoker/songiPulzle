@@ -1,6 +1,8 @@
 package com.jamshidprograms.myapplication
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -8,12 +10,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.jamshidprograms.myapplication.R
+import com.jamshidprograms.myapplication.databinding.ActivityGameBinding
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.concurrent.schedule
 import kotlin.math.absoluteValue
+import com.jamshidprograms.myapplication.InputUsername as InputUsername
 
 class GameActivity : AppCompatActivity() {
+    lateinit var binding: ActivityGameBinding
     var allButtons = ArrayList<ArrayList<AppCompatButton>>()
     var numbers = ArrayList<Int>()
     private var scoreCounter = 0
@@ -27,7 +32,8 @@ class GameActivity : AppCompatActivity() {
     lateinit var restart1: AppCompatButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game)
+        binding = ActivityGameBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         restart1 = findViewById(R.id.restartbtn)
         btnParent = findViewById(R.id.btnParent)
         menu = findViewById(R.id.menu)
@@ -116,10 +122,10 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun timeFormat(time: Int): String {
-        var minute = time / 60
-        var second = time % 60
-        var secondFormat = if (second < 10) "0${second}" else "$second"
-        var minuteFormat = if (minute < 10) "0${minute}" else "$minute"
+        val minute = time / 60
+        val second = time % 60
+        val secondFormat = if (second < 10) "0${second}" else "$second"
+        val minuteFormat = if (minute < 10) "0${minute}" else "$minute"
         return "${minuteFormat}:${secondFormat}"
     }
 
@@ -145,11 +151,15 @@ class GameActivity : AppCompatActivity() {
 
                 Timer("SettingUp", false).schedule(500) {
                     val intent = Intent(this@GameActivity, WinningActivity::class.java)
-                    intent.putExtra("SCORE", score.text.toString())
-                    intent.putExtra("TIME", timeFormat(timeCounter))
-                    intent.putExtra("LOGIN", intent.getStringExtra("USERNAME"))
                     startActivity(intent)
                 }
+                val saveScore = binding.score.text.toString()
+                val saveTime = binding.timeactgame.text.toString()
+                val sharedPreferences:SharedPreferences = getSharedPreferences("dataStorage", Context.MODE_PRIVATE)
+                val editor:SharedPreferences.Editor = sharedPreferences.edit()
+                editor.putString("score", saveScore)
+                editor.putString("time", saveTime)
+                editor.apply()
             }
         }
     }

@@ -1,4 +1,7 @@
 package com.jamshidprograms.myapplication
+import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Adapter
@@ -7,50 +10,28 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 import com.jamshidprograms.myapplication.R
+import com.jamshidprograms.myapplication.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
-    private lateinit var mResulsView: RecyclerView
-    private lateinit var clear: AppCompatButton
-    private lateinit var save: AppCompatButton
-    private lateinit var tv_text:TextView
+    lateinit var binding:ActivityResultBinding
     lateinit var second:String
     lateinit var count:String
+//    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_result)
-        clear = findViewById(R.id.btnclear)
-        save = findViewById(R.id.button_save)
+        binding = ActivityResultBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val sharedPreferences = getSharedPreferences("dataStorage", Context.MODE_PRIVATE)
+        binding.tvText.text = sharedPreferences.getString("userName", "Username topilmadi").toString() + "\n" +
+                sharedPreferences.getString("score", "Yurishlar soni aniqlanmadi").toString() + "\n" +
+                sharedPreferences.getString("time", "Vaqt miqdori aniqlanmadi").toString()
+        binding.homew.setOnClickListener {
+            startActivity(Intent(this@ResultActivity, MainActivity::class.java))
+        }
 
 //        mResulsView = findViewById(R.id.views)
-        tv_text = findViewById(R.id.tv_text)
+
 //        tv_text.text = "${intent.getStringExtra("TIMEC").toString()} +            ${intent.getStringExtra("SCOREC").toString()}"
-        second = intent.getStringExtra("TIMEC").toString()
-        count = intent.getStringExtra("SCOREC").toString()
-        loadData()
-        save.setOnClickListener {
-            saveData()
-            loadData()
-        }
-        clear.setOnClickListener {
-            tv_text.clearComposingText()
-        }
-    }
 
-    private fun saveData() {
-        val insertedText = intent.getStringExtra("TIMEC").toString() + "           ${intent.getStringExtra("SCOREC").toString()}            "
-        tv_text.text = insertedText
-        val sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.apply(){
-            putString("STRING_KEY", insertedText)
-
-        }.apply()
-        Toast.makeText(this, "DAta saved", Toast.LENGTH_SHORT).show()
-    }
-
-    private fun loadData() {
-        val sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE)
-        val savedString = sharedPreferences.getString("STRING_KEY", "SCORE:                 TIME: ")
-        tv_text.text = savedString
     }
 }
